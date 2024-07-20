@@ -3,33 +3,20 @@ import java.util.*;
 
 class useracc {
     private static int pin = 5209;
-
-    public static int getPin() {
-        return pin;
-    }
+ private double balance = 100000;
+   
 
     // setter of balance
-    public static void setPin(int pin) {
-        useracc.pin = pin;
-    }
-
-    // getter of balance
-    private double balance = 100000;
-
-    // function to deposit money
-    public useracc() {
-    }
-
-    // func. to withdraw
-    public void setBalance(double balance) {
+     public void setBalance(double balance) {
         this.balance = balance;
     }
 
-    // function to change pin
+    // getter of balance
     public double getBalance() {
         return balance;
     }
 
+    // function to deposit money
     public void deposit(double b) {
         if (b >= 0) {
             balance = balance + b;
@@ -38,8 +25,8 @@ class useracc {
             System.out.println("INVALID DEPOSIT");
         }
     }
-
-    public void withdraw(double b) {
+    // func. to withdraw
+   public void withdraw(double b) {
         if (b > 0 && b <= balance) {
             balance = balance - b;
             System.out.println("NEW BALANCE" + balance);
@@ -50,7 +37,9 @@ class useracc {
 
     }
 
-    public void changepin() {
+    // function to change pin
+   
+ public void changepin() {
         Random r = new Random();
         int otp = r.nextInt((9999 - 1000 + 1) + 1000);
         System.out.println("current pin:" + pin);
@@ -63,15 +52,17 @@ class useracc {
 
     }
 }
-
 // NEW CLASS ATM
-public class Atm {
-    public static void main(String[] args) {
+public class Atm
+    {
+    public static void main(String[] args) 
+        {
         // CREATING OBJECT OF USERACC CLASS INORDER TO ACCESS ITS FUNCTIONS
         useracc obj = new useracc();
         int choice;
         System.out.println("-------------------------WELCOME TO ATM----------------- ");
-        do {
+        do 
+        {
             System.out.println(
                     "ENTER YOUR CHOICE:\n 1.CHECK BALANCE \t 2. DEPOSIT \t 3.WITHDRAWAL \t 4.CHANGE PIN \t 5.EXIT");
             Scanner sc = new Scanner(System.in);
