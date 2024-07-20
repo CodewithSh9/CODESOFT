@@ -88,8 +88,10 @@ public class numbergame {
                 if (i == n) {
                     System.out.println(" YOU HAVE REACHED THE ATTEMPT LIMIT");
                     System.out.println("CORRECT ANS:" + random);
+                    // PRINTING SCORE OF EACH ROUND
                     System.out.println("SCORE OF ROUND 3:" + temp);
                 }
+
             }
         }
     }
@@ -105,5 +107,6 @@ public class numbergame {
         guessnumber(random1, n);
         guessnumberound2(random2, n);
         guessnumberound3(random3, n);
+
     }
 }
